@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Profil</title>
+    <link href="projet_web.css" rel="stylesheet">
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+
+    <section id="download_cv">
+        <button type="button" onclick="download_cv()" class="download_button">Télécharger mon CV</button>
+    </section>
+
+    <div id="body">
+        <header>
+            <img src="Orlane.jpg" alt="SONKENG TSAFACK Orlane" class="profil-image">
+            <h1>SONKENG TSAFACK Orlane</h1>
+            <p>Ingénieur en Génie Electrique et Informatique Industrielle (GEII)</p>
+        </header>
+    
+        <section id="identité">
+            <h2>Identité</h2>
+            <p>Née le 06-01-2003 à Foto</p>
+            <p>Nationalité : Camerounaise</p>
+            <p>Âge : 21 ans</p>
+            <p>Profession : Étudiante</p>
+            <p>Email : <a href="mailto:sonkengorlane@gmail.com">sonkengorlane@gmail.com</a></p>
+            <p>Je suis une personne active, dynamique, et très motivée, parlant couramment anglais et français.</p>
+        </section>
+    
+        <section id="parcoursscolaire">
+            <h3>Parcours scolaire</h3>
+            <ul>
+                <li><strong>Hadassah Bilingual Nursery and Primary School</strong> Diplôme obtenu : First School Leaving Certificate</li>
+                <li><strong>Jesus and Mary College</strong> Diplôme obtenu : GCE Ordinary Level</li>
+                <li><strong>Jesus and Mary College</strong> Diplôme obtenu : GCE Advanced Level</li>
+            </ul>
+        </section>
+    
+        <section id="parcoursuniversitaire">
+            <h4>Parcours universitaire</h4>
+            <ul>
+                <li><strong>ISSAM</strong> Diplôme obtenu : BTS (Brevet de Technicien Supérieur)</li>
+                <li><strong>ISSAM</strong> Diplôme obtenu : Licence professionnelle en GEII</li>
+                <li><strong>IFI</strong> Master 1</li>
+            </ul>
+        </section>
+    
+        <section id="parcoursprofessionelle">
+            <h5>Parcours Professionnel</h5>
+            <ul>
+                <li><strong>Entreprise : SOFAMAC</strong> Durée : 03 mois</li>
+                <li><strong>Entreprise : ABC Foods</strong> Durée : 03 mois</li>
+                <li><strong>New Technology Constructions</strong> Durée : 06 mois</li>
+            </ul>
+        </section>
+    
+        <footer>
+            <p>&copy; 2024 SONKENG TSAFACK Orlane. Tous droits réservés.</p>
+        </footer>
+    </div>
+
+    <script>
+
+        window.jsPDF = window.jspdf.jsPDF;
+
+        async function download_cv(){
+            //const{ jsPDF } = window.jsPDF;
+            var doc = new jsPDF();
+            //source htmlElemnt or a string containing HTML
+            var elementHTML = document.querySelector("#body");
+            
+            doc.html(elementHTML, {callback: function(doc){
+                //save the pdf
+                doc.save('CV_Orlane.pdf');
+            },
+        margin:[10, 10, 10, 10],
+        autoPaging:'text',
+        x: 0,
+        y: 0,
+        width: 190, // target width in the PDF document
+        windowWidth: 675 // window width in CSS pixels
+        });
+
+            //Créer un nouveau document PDF
+            //const doc = new jsPDF();
+
+            //Ajouter le contenu de la page 
+            //doc.text(document.body.innerText, 10, 10);
+
+            //Enregistrer le PDF
+            //doc.save('cv.pdf');
+        }
+    </script>
+</body>
+</html>

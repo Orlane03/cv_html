@@ -1,0 +1,125 @@
+/* Styles généraux */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #e9dede;
+    color: #1d1b1b;
+}
+
+/* Style de l'en-tête */
+header {
+    text-align: center;
+    background-color: #d9dce0;
+    color: rgb(8, 8, 8);
+    padding: 20px;
+}
+
+header img.profil-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    margin: 10px 0;
+    font-size: 2.5em;
+}
+
+header p {
+    font-size: 1.2em;
+    margin-top: 0;
+}
+
+/* Section Biographie */
+section#identité {
+    padding: 20px;
+    background-color: rgb(243, 243, 240);
+    margin: 20px auto;
+    max-width: 800px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(143, 20, 36, 0.1);
+}
+
+.identity_div {
+    padding: 20px;
+    background-color: rgb(243, 243, 240);
+    margin: 20px auto;
+    max-width: 800px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(143, 20, 36, 0.1);
+}
+
+section#download_cv {
+    text-align: right;
+    color:#1d1b1b
+}
+
+.download_button {
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+
+.download_button:hover {
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid black;
+    color: black;
+    background-color: white;
+}
+
+section#identité h2 {
+    text-align: center;
+    color: #34282a;
+}
+
+section#identité p {
+    text-align: justify;
+    margin: 10px 0;
+}
+
+/* Section Parcours scolaire , professionnel et universitaire */
+section#parcoursscolaire, section#parcoursuniversitaire, section#parcoursprofessionelle{
+    padding: 20px;
+    background-color: white;
+    margin: 20px auto;
+    max-width: 800px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+section#parcoursscolaire h3, section#parcoursuniversitaire h4, section#parcoursprofessionelle h5  {
+    text-align: center;
+    color: #282c34;
+}
+
+section#parcoursscolaire ul, section#parcoursuniversitaire ul,  section#parcoursprofessionelle ul {
+    list-style: none;
+    padding: 0;
+}
+
+section#parcoursscolaire li, section#parcoursuniversitaire li, section#parcoursprofessionelle li {
+    background-color: #f9f9f9;
+    margin: 10px 0;
+    padding: 15px;
+    border-left: 5px solid #282c34;
+    border-radius: 5px;
+}
+
+section#parcoursscolaire li strong, section#parcoursuniversitaire li strong, section#parcoursprofessionelle li strong {
+    display: block;
+    font-size: 1.1em;
+}
+
+/* Style du pied de page */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #dedfe0;
+    color: rgb(36, 34, 34);
+    position: relative;
+    bottom: 0;
+}
